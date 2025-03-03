@@ -1,0 +1,39 @@
+---
+import { useEffect } from "react";
+
+useEffect(() => {
+  const script = document.createElement('script');
+  script.src = '//cookieinfoscript.com/js/cookieinfo.min.js';
+  script.async = true;
+  script.setAttribute('data-font-size', '10px');
+  script.setAttribute('data-divlinkbg', '#01a0ff');
+  script.setAttribute('data-divlink', '#FFFFFF');
+  script.setAttribute('data-message', 'Na naszej stronie internetowej używamy plików cookies...');
+  script.setAttribute('data-linkmsg', 'Polityka Prywatności');
+  script.setAttribute('data-cookie', 'CookieInfoScript');
+  script.setAttribute('data-text-align', 'left');
+  script.setAttribute('data-moreinfo', '/polityka-prywatnosci');
+  script.setAttribute('data-close-text', 'Akceptuje');
+  document.head.appendChild(script);
+}, []);
+---
+
+<script is:inline>
+  if (typeof window !== "undefined") {
+    window.addEventListener('load', function () {
+      var script = document.createElement('script');
+      script.src = '//cookieinfoscript.com/js/cookieinfo.min.js';
+      script.async = true;
+      script.setAttribute('data-font-size', '10px');
+      script.setAttribute('data-divlinkbg', '#01a0ff');
+      script.setAttribute('data-divlink', '#FFFFFF');
+      script.setAttribute('data-message', 'Na naszej stronie internetowej używamy plików cookies...');
+      script.setAttribute('data-linkmsg', 'Polityka Prywatności');
+      script.setAttribute('data-cookie', 'CookieInfoScript');
+      script.setAttribute('data-text-align', 'left');
+      script.setAttribute('data-moreinfo', '/polityka-prywatnosci');
+      script.setAttribute('data-close-text', 'Akceptuje');
+      document.head.appendChild(script);
+    });
+  }
+</script>
